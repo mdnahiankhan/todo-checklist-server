@@ -56,7 +56,6 @@ async function run() {
             const id = req.params.id
             const filter = { _id: new ObjectId(id) };
             const result = await allTodosCollection.deleteOne(filter);
-            console.log(result);
             res.send(result);
         })
     }
